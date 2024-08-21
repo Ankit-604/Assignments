@@ -1,0 +1,34 @@
+.UL {
+  list-style-type: square;
+}
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 600px;
+  margin: 20px;
+  padding: 20px;
+  color: #000000;
+  border: 5px solid #43d41f;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #000000;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+h1 {
+  text-align: center;
+  width: 600px;
+  text-decoration: underline;
+  font-size: 50px;
+  color: #43d41f;
+  border: 5px solid #43d41f;
+  padding: 20px;
+  margin: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #000000;
+}
