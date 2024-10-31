@@ -1,0 +1,140 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Calculator container */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #1d1f27;
+}
+
+.calculator {
+  width: 320px;
+  background-color: #272b33;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+.title {
+  background-color: #2e3540;
+  color: #e1e4ea;
+  padding: 20px;
+  text-align: center;
+}
+/* Display area */
+.display {
+  background-color: #2e3540;
+  color: #e1e4ea;
+  font-size: 2.2em;
+  text-align: right;
+  padding: 20px;
+  height: 80px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Buttons area */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Digit buttons */
+.digit {
+  background-color: #3a3f4a;
+  color: #e1e4ea;
+}
+
+.digit:hover {
+  background-color: #4a515f;
+}
+
+/* Control buttons (clear, backspace, percent) */
+.control {
+  background-color: #d9534f;
+  color: #ffffff;
+}
+
+.control:hover {
+  background-color: #c43f3b;
+}
+
+/* Operator buttons */
+.operator {
+  background-color: #5bc0de;
+  color: #ffffff;
+}
+
+.operator:hover {
+  background-color: #48a6c2;
+}
+
+/* Equals button */
+#equals {
+  background-color: #5cb85c;
+  color: #ffffff;
+  grid-column: span 2;
+  border-radius: 20px; /* Rounded but not circular for a larger area */
+}
+
+#equals:hover {
+  background-color: #4cae4c;
+}
+
+/* Decimal button styling */
+#decimal {
+  background-color: #3a3f4a;
+  color: #e1e4ea;
+}
+
+#decimal:hover {
+  background-color: #4a515f;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+
+  .display {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 1.3em;
+  }
+}
+/* Footer styling */
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
