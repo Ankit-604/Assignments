@@ -1,7 +1,7 @@
 
 # Calculator App
 
-This is a simple calculator built with HTML, CSS, and JavaScript (DOM Manipulation). It performs basic arithmetic operations like addition, subtraction, multiplication, division, percentage calculation, and includes a clear, backspace, and equals button.
+This is a simple calculator built with HTML, CSS, and JavaScript (DOM Manipulation). It performs basic arithmetic operations like addition, subtraction, multiplication, division, and percentage calculation, and includes a clear, backspace, and equals button.
 
 ## Features
 
@@ -17,10 +17,10 @@ This is a simple calculator built with HTML, CSS, and JavaScript (DOM Manipulati
 ## Screenshots
 
 ### Calculator Interface
-![Calculator without operation](first_without_any_operation.png)
+![Calculator without operation](images/first_without_any_operation.png)
 
 ### Calculator in Use
-![Calculator with operation](working.png)
+![Calculator with operation](images/working.png)
 
 ## Technologies Used
 
@@ -32,7 +32,7 @@ This is a simple calculator built with HTML, CSS, and JavaScript (DOM Manipulati
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/calculator-app.git
+   git clone https://github.com/Ankit-604/calculator-app.git
    ```
 2. Open `index.html` in your browser to use the calculator.
 
