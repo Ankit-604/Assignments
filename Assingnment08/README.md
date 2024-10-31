@@ -36,6 +36,8 @@ This is a simple calculator built with HTML, CSS, and JavaScript (DOM Manipulati
    ```
 2. Open `index.html` in your browser to use the calculator.
 
+3. 3. Alternatively, you can view the live demo [here](https://assignments-6bta.vercel.app/).
+
 ## Code Overview
 
 - **HTML (`index.html`)**: Defines the structure of the calculator, including buttons, display area, and footer.
