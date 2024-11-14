@@ -70,6 +70,6 @@ The project is structured as follows:
 - **HTML**: HTML is the standard markup language used for creating web pages. It provides the structure and content of the web page.
 - **CSS**: CSS (Cascading Style Sheets) is a style sheet language used for describing the look and formatting of a document written in HTML or XML. It allows for the separation of content and presentation, making it easier to maintain and update the design of a website.
 
-## Demo
+## Deployment Link
 
-![Demo](https://assignments-fk4z.vercel.app/)
+[Click here](https://assignments-fk4z.vercel.app/) to see the deployed version of the Task Manager application.
