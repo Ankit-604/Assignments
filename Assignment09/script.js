@@ -1,5 +1,5 @@
-const API_KEY = "Q9z7TNF0alcnzcwhzclUdpFs22yshypGYwuio34MlNTUrYTi"; // Replace with your Currents API key
-const BASE_URL = "https://api.currentsapi.services/v1/latest-news";
+const API_KEY = "8e7c371fa5724f2d8d653bf323f07413"; // Replace with your provided API key
+const BASE_URL = "https://newsapi.org/v2/top-headlines";
 let currentPage = 1;
 let totalPages = 1;
 
@@ -18,17 +18,17 @@ const fetchNews = async () => {
   const category = categorySelect.value;
 
   const url = new URL(BASE_URL);
-  url.searchParams.append("apiKey", API_KEY); // API Key
+  url.searchParams.append("apiKey", API_KEY);
   url.searchParams.append("page", currentPage);
   url.searchParams.append("pageSize", 10);
   if (query) {
-    url.searchParams.append("keywords", query); // Query search term
-  }
-  if (country) {
-    url.searchParams.append("country", country); // Country filter
-  }
-  if (category) {
-    url.searchParams.append("category", category); // Category filter
+    url.searchParams.append("q", query);
+  } else if (country || category) {
+    if (country) url.searchParams.append("country", country);
+    if (category) url.searchParams.append("category", category);
+  } else {
+    // Default fallback if no filters are selected
+    url.searchParams.append("country", "us");
   }
 
   try {
@@ -36,8 +36,8 @@ const fetchNews = async () => {
     const data = await response.json();
 
     if (data.status === "ok") {
-      renderNews(data.news);
-      totalPages = Math.ceil(data.totalResults / 10); // Adjust for pagination
+      renderNews(data.articles);
+      totalPages = Math.ceil(data.totalResults / 10);
       updatePagination();
     } else {
       newsContainer.innerHTML = `<p>${data.message}</p>`;
@@ -60,16 +60,16 @@ const renderNews = (articles) => {
     newsItem.className = "news-item";
 
     const imageUrl =
-      article.image || "https://via.placeholder.com/300x180?text=No+Image"; // Default image
+      article.urlToImage || "https://via.placeholder.com/300x180?text=No+Image";
 
     newsItem.innerHTML = `
-      <img src="${imageUrl}" alt="News Image">
-      <div class="news-item-content">
-        <h2>${article.title}</h2>
-        <p>${article.description || "No description available."}</p>
-        <a href="${article.url}" target="_blank">Read More</a>
-      </div>
-    `;
+            <img src="${imageUrl}" alt="News Image">
+            <div class="news-item-content">
+                <h2>${article.title}</h2>
+                <p>${article.description || "No description available."}</p>
+                <a href="${article.url}" target="_blank">Read More</a>
+            </div>
+        `;
     newsContainer.appendChild(newsItem);
   });
 };
