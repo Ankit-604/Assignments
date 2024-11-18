@@ -1,4 +1,4 @@
-const API_KEY = "8e7c371fa5724f2d8d653bf323f07413"; // Replace with your provided API key
+const API_KEY = "8e7c371fa5724f2d8d653bf323f07413"; 
 const BASE_URL = "https://newsapi.org/v2/top-headlines";
 let currentPage = 1;
 let totalPages = 1;
@@ -14,7 +14,7 @@ const pageInfo = document.getElementById("pageInfo");
 
 const fetchNews = async () => {
   const query = searchInput.value.trim();
-  const country = countrySelect.value || "us"; // Default to US
+  const country = countrySelect.value || "us"; 
   const category = categorySelect.value;
 
   const url = new URL(BASE_URL);
@@ -27,7 +27,7 @@ const fetchNews = async () => {
     if (country) url.searchParams.append("country", country);
     if (category) url.searchParams.append("category", category);
   } else {
-    // Default fallback if no filters are selected
+   
     url.searchParams.append("country", "us");
   }
 
