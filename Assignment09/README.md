@@ -51,8 +51,8 @@ Check out the live demo [here](https://assignments-k33y.vercel.app/) 🔗
 
 ## Project Screenshots
 
-![Screenshot 1](path-to-your-screenshot/sample1.png)
-![Screenshot 2](path-to-your-screenshot/sample2.png)
+![Screenshot 1](Sample/sample1.png)
+![Screenshot 2](Sample/sample2.png)
 
 ## Future Enhancements
 
