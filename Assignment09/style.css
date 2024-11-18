@@ -204,7 +204,7 @@ footer .footer-content {
 footer .footer-left,
 footer .footer-right {
   flex: 1;
-  min-width: 250px; /* Ensures content doesn’t get too narrow */
+  min-width: 250px; 
   padding: 10px;
   text-align: left;
 }
@@ -224,7 +224,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Optional: You can add a separator line between left and right if needed */
 footer .footer-left {
   border-right: 1px solid #c2b280;
   padding-right: 20px;
